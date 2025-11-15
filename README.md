@@ -17,6 +17,7 @@ The script uses these domains to filter articles from specific news sources.
 ### Output JSON Files
 Generated article files named in the format:
 - `zohran_mamdani_articles_MMDD-MMDD.json`
+
 Each file contains 300 articles
 Where `MMDD-MMDD` represents the date range (e.g., `0814-1013` for August 14 to October 13, 2025).
 
