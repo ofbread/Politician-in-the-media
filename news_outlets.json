@@ -1,0 +1,54 @@
+{
+"outlets": [
+    { "name": "The New York Times", "domain": "nytimes.com", "bias": "Left", "country": "USA" },
+    { "name": "CNN", "domain": "cnn.com", "bias": "Left", "country": "USA" },
+    { "name": "MSNBC", "domain": "msnbc.com", "bias": "Left", "country": "USA" },
+    { "name": "NPR", "domain": "npr.org", "bias": "Left", "country": "USA" },
+    { "name": "Vox", "domain": "vox.com", "bias": "Left", "country": "USA" },
+    { "name": "HuffPost", "domain": "huffpost.com", "bias": "Left", "country": "USA" },
+    { "name": "The Atlantic", "domain": "theatlantic.com", "bias": "Left", "country": "USA" },
+    { "name": "Mother Jones", "domain": "motherjones.com", "bias": "Left", "country": "USA" },
+    { "name": "BuzzFeed News", "domain": "buzzfeednews.com", "bias": "Left", "country": "USA" },
+    { "name": "Politico", "domain": "politico.com", "bias": "Left", "country": "USA" },
+    { "name": "USA Today", "domain": "usattoday.com", "bias": "Left", "country": "USA" },
+
+    { "name": "Reuters", "domain": "reuters.com", "bias": "Center", "country": "USA" },
+    { "name": "AP News", "domain": "apnews.com", "bias": "Center", "country": "USA" },
+    { "name": "Bloomberg", "domain": "bloomberg.com", "bias": "Center", "country": "USA" },
+    { "name": "The Hill", "domain": "thehill.com", "bias": "Center", "country": "USA" },
+    { "name": "Axios", "domain": "axios.com", "bias": "Center", "country": "USA" },
+    { "name": "ABC News", "domain": "abcnews.go.com", "bias": "Center", "country": "USA" },
+    { "name": "CBS News", "domain": "cbsnews.com", "bias": "Center", "country": "USA" },
+    { "name": "NBC News", "domain": "nbcnews.com", "bias": "Center", "country": "USA" },
+    { "name": "PBS NewsHour", "domain": "pbs.org", "bias": "Center", "country": "USA" },
+    { "name": "Time", "domain": "time.com", "bias": "Center", "country": "USA" },
+    { "name": "Wall Street Journal", "domain": "wsj.com", "bias": "Center", "country": "USA" },
+
+    { "name": "Fox News", "domain": "foxnews.com", "bias": "Right", "country": "USA" },
+    { "name": "New York Post", "domain": "nypost.com", "bias": "Right", "country": "USA" },
+    { "name": "Washington Examiner", "domain": "washingtonexaminer.com", "bias": "Right", "country": "USA" },
+    { "name": "Washington Times", "domain": "washingtontimes.com", "bias": "Right", "country": "USA" },
+    { "name": "The Daily Caller", "domain": "dailycaller.com", "bias": "Right", "country": "USA" },
+    { "name": "Breitbart", "domain": "breitbart.com", "bias": "Right", "country": "USA" },
+    { "name": "Newsmax", "domain": "newsmax.com", "bias": "Right", "country": "USA" },
+    { "name": "The Federalist", "domain": "thefederalist.com", "bias": "Right", "country": "USA" },
+    { "name": "The Blaze", "domain": "theblaze.com", "bias": "Right", "country": "USA" },
+
+    { "name": "CBC News", "domain": "cbc.ca", "bias": "Left", "country": "Canada" },
+    { "name": "Toronto Star", "domain": "thestar.com", "bias": "Left", "country": "Canada" },
+    { "name": "National Observer", "domain": "nationalobserver.com", "bias": "Left", "country": "Canada" },
+
+    { "name": "The Globe and Mail", "domain": "theglobeandmail.com", "bias": "Center", "country": "Canada" },
+    { "name": "CTV News", "domain": "ctvnews.ca", "bias": "Center", "country": "Canada" },
+    { "name": "Global News", "domain": "globalnews.ca", "bias": "Center", "country": "Canada" },
+    { "name": "The Canadian Press", "domain": "thecanadianpress.com", "bias": "Center", "country": "Canada" },
+    { "name": "Radio-Canada", "domain": "ici.radio-canada.ca", "bias": "Center", "country": "Canada" },
+
+    { "name": "National Post", "domain": "nationalpost.com", "bias": "Right", "country": "Canada" },
+    { "name": "Financial Post", "domain": "financialpost.com", "bias": "Right", "country": "Canada" },
+    { "name": "Rebel News", "domain": "rebelnews.com", "bias": "Right", "country": "Canada" },
+    { "name": "Western Standard", "domain": "westernstandard.news", "bias": "Right", "country": "Canada" }
+
+
+    ]
+}
