@@ -9,12 +9,13 @@ load_dotenv()
 
 NEWS_OUTLETS_FILE = "news_outlets.json"
 
-def load_domains_from_outlets(filename: str = NEWS_OUTLETS_FILE):
+def load_domains_from_outlets(bias: str = None, filename: str = NEWS_OUTLETS_FILE):
     with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
     outlets = data.get("outlets", [])
+    outlets = [outlet for outlet in outlets if outlet.get("bias") == bias]
     domains = [outlet.get("domain") for outlet in outlets if outlet.get("domain")]
-    print(f"Loaded {len(domains)} domains from {filename}")
+    print(f"Loaded {len(domains)} domains from {filename}" + (f" (bias: {bias})" if bias else ""))
     return domains
 
 
@@ -28,6 +29,7 @@ class NewsAPICollector:
         self.articles = []
         self.published_after = None
         self.published_before = None
+        self.bias = None
         
     def fetch_articles_page(self, search_term: str, domains: list[str],
                            language: str = "en", limit: int = 25, 
@@ -53,21 +55,23 @@ class NewsAPICollector:
                 print(f"Response: {e.response.text}")
             return None
     
-    def collect_articles(self, search_term: str, target_count: int = 500,
+    def collect_articles(self, search_term: str, target_count: int = 170,
                         language: str = "en", limit: int = 25, 
                         delay: float = 1.0,
-                        published_after: str = "2025-08-14",
-                        published_before: str = "2025-10-13"):
+                        published_after: str = "2025-01-01",
+                        published_before: str = "2025-11-18",
+                        bias: str = None):
         self.articles = []
         self.published_after = published_after
         self.published_before = published_before
+        self.bias = bias
         page = 1
         total_collected = 0
         
         print(f"Starting collection of {target_count} articles about '{search_term}'...")
         print("-" * 60)
         
-        domains = load_domains_from_outlets()
+        domains = load_domains_from_outlets(bias=bias)
         
         time.sleep(delay)
         
@@ -123,7 +127,8 @@ class NewsAPICollector:
                 before_date = datetime.strptime(self.published_before, "%Y-%m-%d")
                 after_str = after_date.strftime("%m%d")
                 before_str = before_date.strftime("%m%d")
-                filename = f"zohran_mamdani_articles_{after_str}-{before_str}.json"
+                bias_suffix = f"_{self.bias}" 
+                filename = f"zohran_mamdani_articles_{after_str}-{before_str}{bias_suffix}.json"
             else:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"zohran_mamdani_articles_{timestamp}.json"
@@ -152,10 +157,11 @@ def main():
     
     articles = collector.collect_articles(
         search_term="Zohran Mamdani",
-        target_count=500,
+        target_count=170,
         language="en",
         limit=25,
-        delay=1.0
+        delay=1.0,
+        bias="Left"
     )
     
     if articles:
