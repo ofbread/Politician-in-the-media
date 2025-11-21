@@ -157,11 +157,11 @@ def main():
     
     articles = collector.collect_articles(
         search_term="Zohran Mamdani",
-        target_count=170,
+        target_count=250,
         language="en",
         limit=25,
         delay=1.0,
-        bias="Left"
+        bias="Right"
     )
     
     if articles:

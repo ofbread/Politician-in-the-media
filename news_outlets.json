@@ -25,10 +25,6 @@
     { "name": "Seattle Times", "domain": "seattletimes.com", "bias": "Left", "country": "USA" },
     { "name": "Philadelphia Inquirer", "domain": "inquirer.com", "bias": "Left", "country": "USA" },
 
-    { "name": "Bloomberg", "domain": "bloomberg.com", "bias": "Center", "country": "USA" },
-    { "name": "Time", "domain": "time.com", "bias": "Center", "country": "USA" },
-    { "name": "Wall Street Journal", "domain": "wsj.com", "bias": "Center", "country": "USA" },
-
     { "name": "Fox News", "domain": "foxnews.com", "bias": "Right", "country": "USA" },
     { "name": "New York Post", "domain": "nypost.com", "bias": "Right", "country": "USA" },
     { "name": "Washington Times", "domain": "washingtontimes.com", "bias": "Right", "country": "USA" },
@@ -38,16 +34,10 @@
     { "name": "National Observer", "domain": "nationalobserver.com", "bias": "Left", "country": "Canada" },
     { "name": "The Globe and Mail", "domain": "theglobeandmail.com", "bias": "Left", "country": "Canada" },
     { "name": "Maclean's", "domain": "macleans.ca", "bias": "Left", "country": "Canada" },
-
-    { "name": "CTV News", "domain": "ctvnews.ca", "bias": "Center", "country": "Canada" },
-    { "name": "Global News", "domain": "globalnews.ca", "bias": "Center", "country": "Canada" },
-    { "name": "The Canadian Press", "domain": "thecanadianpress.com", "bias": "Center", "country": "Canada" },
-    { "name": "Radio-Canada", "domain": "ici.radio-canada.ca", "bias": "Center", "country": "Canada" },
-
+    
     { "name": "National Post", "domain": "nationalpost.com", "bias": "Right", "country": "Canada" },
     { "name": "Financial Post", "domain": "financialpost.com", "bias": "Right", "country": "Canada" },
     { "name": "Rebel News", "domain": "rebelnews.com", "bias": "Right", "country": "Canada" },
     { "name": "Western Standard", "domain": "westernstandard.news", "bias": "Right", "country": "Canada" }
-
     ]
 }
