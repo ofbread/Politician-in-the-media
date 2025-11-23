@@ -1,5 +1,6 @@
 import json
 import csv 
+import pandas as pd
 
 def read_json(filename): 
     with open(filename, 'r', encoding='utf-8') as f:
@@ -26,10 +27,14 @@ def get_article_information(articles, article_number):
         writer.writerows(rows)   
 
 def main(): 
-    filename1 = "zohran_mamdani_articles_0814-1013.json"
-    filename2 = "zohran_mamdani_articles_1014-1115.json"
-    get_article_information(read_json(filename1), 100) 
-    get_article_information(read_json(filename2), 100) 
+    filename1 = "zohran_mamdani_articles_0101-1118_Left.json"
+    filename2 = "zohran_mamdani_articles_0101-1118_Right.json"
+    get_article_information(read_json(filename1), 250) 
+    get_article_information(read_json(filename2), 250) 
+     
+    df = pd.read_csv("open_coding.csv")
+    df.to_excel("open_coding.xlsx", index=False)
+
 
 if __name__ == "__main__": 
     main() 
