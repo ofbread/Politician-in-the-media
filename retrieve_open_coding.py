@@ -16,10 +16,12 @@ def get_article_information(articles, article_number):
         data = {
             "title": articles[x]["title"],
             "url": articles[x]["url"],
+            "description" : articles[x]["description"], 
+            "snippet": articles[x]["snippet"],
         }
         rows.append(data)
 
-    header = ["title", "url"]
+    header = ["title", "url", "description", "snippet"]
 
     with open("open_coding.csv", mode="a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=header)
@@ -32,8 +34,8 @@ def main():
     get_article_information(read_json(filename1), 250) 
     get_article_information(read_json(filename2), 250) 
      
-    df = pd.read_csv("open_coding.csv")
-    df.to_excel("open_coding.xlsx", index=False)
+    # df = pd.read_csv("open_coding.csv")
+    # df.to_excel("open_coding.xlsx", index=False)
 
 
 if __name__ == "__main__": 
