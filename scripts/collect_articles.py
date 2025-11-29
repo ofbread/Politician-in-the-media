@@ -4,10 +4,15 @@ import time
 import os
 from datetime import datetime
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
 NEWS_OUTLETS_FILE = "news_outlets.json"
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
+DATA_DIR = ROOT_DIR / "data"
 
 def load_domains_from_outlets(bias: str = None, filename: str = NEWS_OUTLETS_FILE):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -128,10 +133,10 @@ class NewsAPICollector:
                 after_str = after_date.strftime("%m%d")
                 before_str = before_date.strftime("%m%d")
                 bias_suffix = f"_{self.bias}" 
-                filename = f"zohran_mamdani_articles_{after_str}-{before_str}{bias_suffix}.json"
+                filename = DATA_DIR / f"zohran_mamdani_articles_{after_str}-{before_str}{bias_suffix}.json"
             else:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                filename = f"zohran_mamdani_articles_{timestamp}.json"
+                filename = DATA_DIR / f"zohran_mamdani_articles_{timestamp}.json"
         
         output = {
             "metadata": {
