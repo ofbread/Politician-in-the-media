@@ -55,11 +55,11 @@ class NewsAPICollector:
                 print(f"Response: {e.response.text}")
             return None
     
-    def collect_articles(self, search_term: str, target_count: int = 170,
+    def collect_articles(self, search_term: str, target_count: int = 20,
                         language: str = "en", limit: int = 25, 
                         delay: float = 1.0,
-                        published_after: str = "2025-01-01",
-                        published_before: str = "2025-11-18",
+                        published_after: str = "2025-11-19",
+                        published_before: str = "2025-11-28",
                         bias: str = None):
         self.articles = []
         self.published_after = published_after
@@ -157,7 +157,7 @@ def main():
     
     articles = collector.collect_articles(
         search_term="Zohran Mamdani",
-        target_count=250,
+        target_count=20,
         language="en",
         limit=25,
         delay=1.0,
