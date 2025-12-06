@@ -20,7 +20,7 @@ Generated article files named in the format:
 
 Where `MMDD-MMDD` represents the date range (e.g., `0814-1013` for August 14 to October 13, 2025).
 
-Each file contains 300 articles.
+Each file contains 250 articles.
 
 
 
